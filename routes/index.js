@@ -14,17 +14,17 @@ router.get('/', (req, res) => {
 
 /**
  * Access history URL.
- * @name GET/:historyID
+ * @name GET/
  */
-// router.get('/:historyID', (req, res) => {
-//   const history = Histories.findOne(req.params.historyID);
-//   if (history === undefined) {
-//     res.status(404).json({
-//       error: `History URL ${req.params.historyID} not found.`,
-//     }).end();
-//   } else {
-//     res.redirect(history.url);
-//   }
-// });
+router.get('/histories', (req, res) => {
+  const histories = Histories.findAll();
+  if (histories === undefined) {
+    res.status(404).json({
+      error: `History ${req.params.historyID} not found.`,
+    }).end();
+  } else {
+    res.status(200).json(histories).end();
+  }
+});
 
 module.exports = router;

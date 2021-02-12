@@ -1,0 +1,50 @@
+.history-container {
+  border: none;
+}
+.history-container .multi-node {
+  display: inline-block;
+  border: 0px;
+}
+
+.history-container .multi-element {
+  display: inline-block;
+  position: absolute;
+}
+
+.history-container .multi-element.child-0 {
+  top: 0;
+  left: -5px;
+  z-index: 0;
+}
+.history-container .multi-element.child-1 {
+  top: -5px;
+  left: -10px;
+  z-index: -1;
+}
+.history-container .multi-element.child-2 {
+  top: -10px;
+  left: -15px;
+  z-index: -2;
+}
+.history-container .multi-element.child-3 {
+  top: -15px;
+  left: -20px;
+  z-index: -3;
+}
+.history-container .multi-element.child-4 {
+  top: -20px;
+  left: -25px;
+  z-index: -4;
+}
+
+.popover .history-container {
+  overflow-x: hidden;
+  overflow-y: auto;
+  height: initial;
+  width: 270px;
+  white-space: initial;
+}
+
+.popover .history-container img{
+  margin: 10px;
+}

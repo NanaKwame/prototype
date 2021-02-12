@@ -7,8 +7,6 @@ const cors = require('cors');
 
 // import all the express routes we will be using
 const indexRouter = require('./routes/index');
-const shortsRouter = require('./routes/shorts');
-const usersRouter = require('./routes/users');
 
 // create our app
 const app = express();
@@ -40,6 +38,8 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 // connect url hierarchies to our routers
-app.use('/', indexRouter);
+app.use('/api', indexRouter);
+
+console.log("Running on localhost:3000...");
 
 module.exports = app;

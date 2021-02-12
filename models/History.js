@@ -1,10 +1,48 @@
-let data = [];
+let data = [
+  {id: 0, image: 'cut0.png', children: null},
+  [
+    {id: 1110, image: 'cut1110.png', children: null},
+    {id: 1, image: 'cut1.png', children: null},
+    {id: 111, image: 'cut111.png', children: null}
+  ],
+  {id: 11, image: 'cut11.png', children: null},
+  {id: 22, image: 'cut22.png', children: null},
+  [
+    {id: 4, image: 'cut4.png', children: null},
+    {id: 33, image: 'cut33.png', children: null}
+  ],
+  {id: 5, image: 'cut5.png', children: null}
+];
+
+let data2 = [
+  {id: 0, image: 'cut0.png', children: [
+
+    {id: 1, image: 'cut1.png', children: [
+      {id: 2, image: 'cut2.png', children: [
+        {id: 3, image: 'cut3.png', children: null}
+      ]}
+    ]},
+
+    {id: 111, image: 'cut111.png', children: null},
+
+    {id: 1110, image: 'cut1110.png', children: [
+      {id: 11, image: 'cut11.png', children: [
+        {id: 22, image: 'cut22.png', children: [
+          {id: 33, image: 'cut33.png', children: null},
+          {id: 4, image: 'cut4.png', children: [
+            {id: 5, image: 'cut5.png', children: null}
+          ]}
+        ]}
+      ]}
+    ]}
+  ]}
+];
 
 /**
  * @typedef History
  * @prop {string} id - some string, valid in a URL path
- * @prop {string} url - link to an external source
- * @prop {string} creator - username
+ * @prop {string} image - link to an external source
+ * @prop {string} children - username
  */
 
 /**
@@ -17,12 +55,12 @@ class Histories {
   /**
    * Add a History.
    * @param {string} id - History id
-   * @param {string} url - History url
-   * @param {string} creator - History creator
+   * @param {string} image - History image
+   * @param {string} children - History children
    * @return {History} - created history
    */
-  static addOne(id, url, creator = null) {
-    const history = { id, url, creator };
+  static addOne(id, image, children = null) {
+    const history = { id, image, children };
     data.push(history);
     return history;
   }
@@ -47,12 +85,12 @@ class Histories {
   /**
    * Update a History.
    * @param {string} id - id of History to update
-   * @param {string} url - new URL
+   * @param {string} image - new URL
    * @return {History | undefined} - updated History
    */
-  static updateOne(id, url) {
+  static updateOne(id, image) {
     const history = Histories.findOne(id);
-    history.url = url;
+    history.image = image;
     return history;
   }
 

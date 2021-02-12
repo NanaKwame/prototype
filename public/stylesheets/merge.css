@@ -1,0 +1,147 @@
+.history-container .multi-node {
+    display: inline-block;
+    border: 0px;
+  }
+  
+  .multi-node-container.expanded {
+    position: inherit;
+    vertical-align: top;
+    width: initial;
+  }
+
+  .history-container .expanded .multi-node-size {
+    display: none;
+  }
+  
+  .history-container .multi-element {
+    display: inline-block;
+    position: absolute;
+  }
+  
+  .history-container .multi-node-container.expanded .multi-element {
+    display: inline-block;
+    position: inherit;
+  }
+  
+  .history-container .multi-element.child-0 {
+    top: 0;
+    left: -5px;
+    z-index: 0;
+  }
+  .history-container .multi-element.child-1 {
+    top: -5px;
+    left: -10px;
+    z-index: -1;
+  }
+  .history-container .multi-element.child-2 {
+    top: -10px;
+    left: -15px;
+    z-index: -2;
+  }
+  .history-container .multi-element.child-3 {
+    top: -15px;
+    left: -20px;
+    z-index: -3;
+  }
+  .history-container .multi-element.child-4 {
+    top: -20px;
+    left: -25px;
+    z-index: -4;
+  }
+
+  .merge-container {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+  }
+  .merge-container img{
+    height: 200px;
+  }
+  .merge-container .merge-left {
+    display: flex;
+    flex-direction: column;
+    margin-right: 20px;
+  }
+  .merge-container .merge-left img {
+  }
+  .merge-container .merge-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .merge-container button {
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    z-index: 100;
+  }
+
+  .merge-drag-zones {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    top: 0px;
+  }
+
+  .draggable {
+    border: 2px solid rgba(0,0,0, 0.2);
+  }
+
+  .orange {
+    border-color: orange;
+  }
+
+  .merge-drop-zones-container {
+    position: relative;
+    margin: 20px;
+  }
+
+  .merge-drag-zone1 {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .merge-drag-zone1a {
+    display: flex;
+    margin: 2px;
+    width: 25px;
+    height: 200px;
+    
+  }
+
+  .merge-drag-zone2 {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .merge-drag-zone2a {
+    display: flex;
+    margin: 2px;
+    height: 170px;
+    width: 300px;
+  }
+
+  .merge-drag-zone2b {
+    display: flex;
+    margin: 2px;
+    height: 25px;
+    width: 300px;
+  }
+
+  .merge-drag-zone3 {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .merge-drag-zone3a {
+    display: flex;
+    margin: 2px;
+    width: 30px;
+    height: 200px;
+  }
+
+  .merge-right .merge-drag-zones {
+    top: 120px;
+  }
+  
